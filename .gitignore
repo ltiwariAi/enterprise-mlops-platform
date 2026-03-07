@@ -7,3 +7,4 @@ mlruns/
 *.egg-info/
 .env
 data/processed/
+.ipynb_checkpoints/
