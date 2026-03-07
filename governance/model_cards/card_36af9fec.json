@@ -1,0 +1,64 @@
+{
+  "model_card_version": "1.0",
+  "generated_at": "2026-03-07T15:22:45.434749",
+  "model_details": {
+    "name": "fraud-detection-model",
+    "run_id": "36af9fec038f4293a2f5b1716a7f7bd7",
+    "framework": "XGBoost",
+    "type": "Binary Classification \u2014 Fraud Detection",
+    "parameters": {
+      "n_estimators": "300",
+      "max_depth": "8",
+      "learning_rate": "0.05",
+      "scale_pos_weight": "235.54642223536368",
+      "min_child_weight": "3",
+      "subsample": "0.8",
+      "colsample_bytree": "0.8",
+      "eval_metric": "aucpr",
+      "random_state": "42",
+      "n_jobs": "-1",
+      "dataset": "synthetic_500k",
+      "num_features": "33"
+    }
+  },
+  "intended_use": {
+    "primary": "Real-time transaction fraud detection",
+    "users": "Fraud detection platform, automated scoring pipeline",
+    "out_of_scope": "Credit decisioning, customer segmentation, marketing"
+  },
+  "training_data": {
+    "dataset": "synthetic_500k",
+    "features": 33,
+    "class_balance": "Fraud rate ~0.4% (imbalanced)",
+    "split_method": "Time-based (80/20) \u2014 no future data leakage"
+  },
+  "performance": {
+    "auc_pr": 0.935939271811217,
+    "precision": 0.8866498740554156,
+    "recall": 0.8866498740554156,
+    "f1_score": 0.8866498740554156,
+    "true_positives": 0,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "true_negatives": 0
+  },
+  "ethical_considerations": {
+    "bias_testing": "pending",
+    "fairness_metrics": "pending \u2014 required before production",
+    "demographic_analysis": "pending"
+  },
+  "limitations": [
+    "Trained on synthetic data \u2014 production deployment requires validation on real transactions",
+    "Feature store latency assumptions based on local testing, not production infrastructure",
+    "Fraud patterns limited to 5 typologies \u2014 real-world fraud is more diverse",
+    "Geographic coverage limited to UK, US, India \u2014 model may underperform in other regions"
+  ],
+  "governance": {
+    "regulatory_review": "pending",
+    "bias_check_passed": false,
+    "explainability_check_passed": false,
+    "approved_for_production": false,
+    "approved_by": null,
+    "approval_date": null
+  }
+}

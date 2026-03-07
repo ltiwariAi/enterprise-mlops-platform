@@ -1,0 +1,53 @@
+[
+  {
+    "timestamp": "2026-03-07T15:31:42.059918",
+    "action": "performance_check",
+    "result": "passed",
+    "details": {
+      "gate": "performance",
+      "passed": 1,
+      "auc_pr": 0.935939271811217,
+      "auc_pr_threshold": 0.75,
+      "recall": 0.8866498740554156,
+      "recall_threshold": 0.7
+    }
+  },
+  {
+    "timestamp": "2026-03-07T15:31:42.059960",
+    "action": "bias_check",
+    "result": "failed",
+    "details": {
+      "gate": "bias",
+      "passed": false,
+      "groups_checked": 3,
+      "groups_failed": [
+        "Merchant Country",
+        "Transaction Channel",
+        "Merchant Category"
+      ]
+    }
+  },
+  {
+    "timestamp": "2026-03-07T15:31:42.061404",
+    "action": "explainability_check",
+    "result": "passed",
+    "details": {
+      "gate": "explainability",
+      "passed": true,
+      "meaningful_features": 29,
+      "min_required": 5,
+      "top_feature": "amount",
+      "top_feature_dominance": 0.2222999930381775
+    }
+  },
+  {
+    "timestamp": "2026-03-07T15:31:42.061446",
+    "action": "model_card_check",
+    "result": "passed",
+    "details": {
+      "gate": "model_card",
+      "passed": true,
+      "missing_sections": []
+    }
+  }
+]
